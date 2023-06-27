@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="779.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_User.Add_User_Controller">
+   <right>
+       <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
+           <TableView fx:id="User_List" prefHeight="398.0" prefWidth="971.0">
+               <columns>
+                   <TableColumn fx:id="Column_ID" prefWidth="48.0" text="ID" />
+                   <TableColumn fx:id="Column_Name" prefWidth="96.0" text="Name" />
+                   <TableColumn fx:id="Column_Email" prefWidth="256.0" text="Email" />
+                   <TableColumn fx:id="Column_Username" prefWidth="122.0" text="Username" />
+                   <TableColumn fx:id="Column_Gender" prefWidth="157.0" text="Gender" />
+                   <TableColumn fx:id="Column_Disability" prefWidth="130.0" text="Disability" />
+                   <TableColumn fx:id="Column_Role" prefWidth="161.0" text="Role" />
+               </columns>
+           </TableView>
+           <Button fx:id="remove_User_Button" layoutX="846.0" layoutY="413.0" mnemonicParsing="false" onAction="#handle_Remove_Button" prefHeight="57.0" prefWidth="106.0" text="Remove" />
+           <TextField fx:id="Name_Field" layoutX="20.0" layoutY="484.0" promptText="Enter name " />
+           <Button fx:id="edit_User_Button" layoutX="14.0" layoutY="417.0" mnemonicParsing="false" onAction="#handle_Edit_User_Button" prefHeight="47.0" prefWidth="160.0" text="Edit" />
+           <TextField fx:id="Email_Field" layoutX="20.0" layoutY="527.0" promptText="Enter Email" />
+           <PasswordField fx:id="Password_Field" layoutX="20.0" layoutY="609.0" promptText="Enter Password" />
+           <PasswordField fx:id="rePassword_Field" layoutX="20.0" layoutY="650.0" promptText="renter the Password" />
+           <ChoiceBox fx:id="Choicebox_Gender" layoutX="186.0" layoutY="484.0" prefWidth="150.0" />
+           <ChoiceBox fx:id="Choicebox_Role" layoutX="186.0" layoutY="540.0" prefWidth="150.0" />
+           <Label layoutX="232.0" layoutY="462.0" prefHeight="17.0" prefWidth="40.0" text="Gender" textFill="#dbdbdb" />
+           <Label layoutX="241.0" layoutY="519.0" text="Role" textFill="WHITE" />
+           <ToggleButton fx:id="Disability_Button" layoutX="214.0" layoutY="599.0" mnemonicParsing="false" onAction="#handle_disability_Button" prefHeight="45.0" prefWidth="95.0" text="Disability" />
+           <TextField fx:id="User_Name_Field" layoutX="20.0" layoutY="567.0" promptText="Enter User name " />
+         <Button fx:id="register_Button" layoutX="404.0" layoutY="685.0" mnemonicParsing="false" onAction="#handle_Register_Button" prefHeight="54.0" prefWidth="164.0" text="Register" />
+         <Button fx:id="refresh_Button" layoutX="447.0" layoutY="416.0" mnemonicParsing="false" onAction="#handle_Refresh_Button" prefHeight="52.0" prefWidth="131.0" text="Refresh" />
+       </AnchorPane>
+   </right>
+   <left>
+       <AnchorPane prefHeight="779.0" prefWidth="295.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
+           <Button fx:id="Back_Button_add_User" layoutX="1.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleBackButtonAdd" prefHeight="51.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
+         <Button fx:id="Search_button" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#handle_Search" style="-fx-background-radius: 90;" text="Search" />
+         <TextField fx:id="Search_text" layoutX="72.0" layoutY="44.0" prefHeight="25.0" prefWidth="209.0" style="-fx-background-radius: 30;" />
+       </AnchorPane>
+   </left>
+</BorderPane>
