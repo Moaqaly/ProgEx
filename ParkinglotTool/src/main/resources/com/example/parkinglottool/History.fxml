@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="History.History_Controller">
+   <right>
+      <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="error_label" layoutX="282.0" layoutY="679.0" textFill="RED" />
+            <TableView fx:id="ReservationHistory" layoutY="30.0" prefHeight="423.0" prefWidth="790.0">
+              <columns>
+                <TableColumn fx:id="ParkingSpaceColumn" prefWidth="374.0" text="Parking Space" />
+                <TableColumn fx:id="DateColumn" prefWidth="402.0" text="Date" />
+              </columns>
+            </TableView>
+            <TableView fx:id="ReservationFuture" layoutX="-3.0" layoutY="479.0" prefHeight="351.0" prefWidth="795.0">
+              <columns>
+                <TableColumn fx:id="FParkingSpaceColumn" prefWidth="380.0" text="Parking Space" />
+                <TableColumn fx:id="FDateColumn" prefWidth="412.0" text="Date" />
+              </columns>
+            </TableView>
+            <Label layoutX="24.0" layoutY="6.0" text="Past Reservations:" textFill="WHITE" />
+            <Label layoutX="10.0" layoutY="460.0" text="Future Reservations:" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="779.0" prefWidth="295.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Back_Button" layoutY="444.0" mnemonicParsing="false" onAction="#handleBackButtonHistory" prefHeight="51.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

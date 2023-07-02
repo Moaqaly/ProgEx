@@ -13,7 +13,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import org.mindrot.jbcrypt.BCrypt;
+import org.mindrot.jbcrypt.*;
 
 import Mysql.DatabaseConnection;
 
@@ -23,6 +23,7 @@ public class LoginController {
     public Button LoginButton;
     public Label LoginMassege;
     public Button CloseButton;
+    public String username;
 
     @FXML
     public  TextField UsernameTextfeld;
@@ -63,6 +64,7 @@ public class LoginController {
                 }
                 boolean b = BCrypt.checkpw(PasswordTextfeld.getText(), ps);
                 if(b) {
+                	//username=un;
                     System.out.println("Passwort korrekt");
                     int irole = Integer.parseInt(role);
                     System.out.println(irole);

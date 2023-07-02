@@ -76,6 +76,19 @@ public class Home_User_Controller implements Initializable  {
 
 
     @FXML
+    private void HandleHistory() throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("/com/example/parkinglottool/History.fxml"));
+        Scene scene = new Scene(root);
+
+        // Get the current stage (window)
+        Stage currentStage = (Stage) Logout_Button.getScene().getWindow();
+
+        // Set the login page scene and show the stage
+        currentStage.setScene(scene);
+        currentStage.show();
+    }
+    
+    @FXML
     private void Book_now_ButtonOnAction(ActionEvent event) throws SQLException {
 
         String parkingTypeName = "";
@@ -138,7 +151,7 @@ public class Home_User_Controller implements Initializable  {
             showErrorAlert("Error!", "This " + Logedinuser + " is not disabled and cannot reserve this parking type.");
         } else if (Objects.equals(getGender(Logedinuser), "male") && parkingTypeName.equals("Women")) {
             showErrorAlert("Error", "This parking can't be reserved for " + Logedinuser + ". It is for women only!");
-        } else if (!date.equals(currentDate)) {
+        } else if (!date.isEqual(currentDate) && !date.isEqual(currentDate.plusDays(1)))  {
             showErrorAlert("ERROR", "The date must be today!");
         }else if (gettyp(Logedinuser) == 2 && previousReservationDate != null && date.equals(previousReservationDate)) {
             showErrorAlert("ERROR", "Only one reservation per day is allowed.");
