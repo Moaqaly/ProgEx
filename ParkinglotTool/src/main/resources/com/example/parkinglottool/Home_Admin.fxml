@@ -182,12 +182,12 @@
                <Font name="Agency FB Bold" size="23.0" />
             </font>
          </Button>
-         <Button fx:id="History_button" layoutX="125.0" layoutY="446.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="270.0" prefWidth="145.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
+         <Button fx:id="History_button" layoutX="15.0" layoutY="132.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="122.0" prefWidth="241.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
             <font>
                <Font name="Agency FB Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="Add_User_Button" layoutX="2.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="270.0" prefWidth="123.0" style="-fx-background-color: #ffc857;" text="Add User" textFill="WHITE">
+         <Button fx:id="Add_User_Button" layoutX="11.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="136.0" prefWidth="249.0" style="-fx-background-color: #ffc857;" text="Add User" textFill="WHITE">
             <font>
                <Font name="Agency FB Bold" size="19.0" />
             </font>

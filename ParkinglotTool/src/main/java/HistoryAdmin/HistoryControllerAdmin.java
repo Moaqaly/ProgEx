@@ -27,6 +27,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
+
 public class HistoryControllerAdmin implements Initializable {
 	@FXML
 	private Button Back_Button;
@@ -78,7 +79,7 @@ public class HistoryControllerAdmin implements Initializable {
 	    load();
 	}
 	
-	private void load() {
+	public void load() {
 		ObservableList<HistoryDataAdmin> DataList = FXCollections.observableArrayList();
 		ObservableList<HistoryDataAdmin> DataList2 = FXCollections.observableArrayList();
 		String space = "leer";
@@ -138,5 +139,7 @@ public class HistoryControllerAdmin implements Initializable {
         currentStage.setScene(scene);
         currentStage.show();
 	}
+	
+	
 	
 }
