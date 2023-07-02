@@ -12,20 +12,12 @@
       <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="error_label" layoutX="282.0" layoutY="679.0" textFill="RED" />
-            <TableView fx:id="ReservationHistory" layoutY="30.0" prefHeight="423.0" prefWidth="790.0">
+            <TableView fx:id="ReservationHistory" layoutY="-3.0" prefHeight="835.0" prefWidth="790.0">
               <columns>
                 <TableColumn fx:id="ParkingSpaceColumn" prefWidth="374.0" text="Parking Space" />
                 <TableColumn fx:id="DateColumn" prefWidth="402.0" text="Date" />
               </columns>
             </TableView>
-            <TableView fx:id="ReservationFuture" layoutX="-3.0" layoutY="479.0" prefHeight="351.0" prefWidth="795.0">
-              <columns>
-                <TableColumn fx:id="FParkingSpaceColumn" prefWidth="380.0" text="Parking Space" />
-                <TableColumn fx:id="FDateColumn" prefWidth="412.0" text="Date" />
-              </columns>
-            </TableView>
-            <Label layoutX="24.0" layoutY="6.0" text="Past Reservations:" textFill="WHITE" />
-            <Label layoutX="10.0" layoutY="460.0" text="Future Reservations:" textFill="WHITE" />
          </children>
       </AnchorPane>
    </right>

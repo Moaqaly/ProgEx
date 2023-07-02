@@ -19,7 +19,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
+<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
    <right>
       <AnchorPane prefHeight="953.0" prefWidth="744.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
          <children>
@@ -182,7 +182,7 @@
                <Font name="Agency FB Bold" size="23.0" />
             </font>
          </Button>
-         <Button fx:id="History_button" layoutX="125.0" layoutY="446.0" mnemonicParsing="false" prefHeight="270.0" prefWidth="145.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
+         <Button fx:id="History_button" layoutX="125.0" layoutY="446.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="270.0" prefWidth="145.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
             <font>
                <Font name="Agency FB Bold" size="21.0" />
             </font>

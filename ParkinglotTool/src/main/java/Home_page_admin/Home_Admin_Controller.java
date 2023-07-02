@@ -80,6 +80,21 @@ public class Home_Admin_Controller implements Initializable  {
     private TableColumn<info_List, Integer> Parkinglot_nummber;
 
 ///////////////
+    
+    
+    @FXML
+    private void HandleHistory() throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("/com/example/parkinglottool/HistoryAdmin.fxml"));
+        Scene scene = new Scene(root);
+
+        // Get the current stage (window)
+        Stage currentStage = (Stage) Logout_Button.getScene().getWindow();
+
+        // Set the login page scene and show the stage
+        currentStage.setScene(scene);
+        currentStage.show();
+    }
+    
     @FXML
     private void Book_now_ButtonOnAction(ActionEvent event) throws SQLException {
         String parkingTypeName = "";
@@ -144,8 +159,8 @@ public class Home_Admin_Controller implements Initializable  {
             showErrorAlert("Error!", "This " + selectedUser.getName_A() + " is not disabled and cannot reserve this parking type.");
         } else if (Objects.equals(selectedUser.getGender_A(), "male") && parkingTypeName.equals("Women")) {
             showErrorAlert("Error", "This parking can't be reserved for " + selectedUser.getName_A() + ". It is for women only!");
-        } else if (!date.equals(currentDate)) {
-            showErrorAlert("ERROR", "The date must be today!");
+        } else if (!date.isEqual(currentDate) && !date.isEqual(currentDate.plusDays(365))) {
+            showErrorAlert("ERROR", "The date must be within a year from today!");
         }else if (selectedUser.getTyp().equals("User") && previousReservationDate != null && date.equals(previousReservationDate)) {
             showErrorAlert("ERROR", "Only one reservation per day is allowed.");
         }else if (!isAvailable) {

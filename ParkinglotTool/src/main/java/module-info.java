@@ -11,5 +11,6 @@ module com.example.parkinglottool {
     opens Home_page_admin;
     opens Add_User;
     opens History;
+    opens HistoryAdmin;
 
 }

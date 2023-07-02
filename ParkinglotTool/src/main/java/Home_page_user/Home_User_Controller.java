@@ -58,6 +58,9 @@ public class Home_User_Controller implements Initializable  {
     /////
     @FXML
     private DatePicker Date_Selecter;
+    
+    @FXML
+    private Label error_label;
 
     @FXML
     private Button Book_now_Button;
@@ -77,6 +80,7 @@ public class Home_User_Controller implements Initializable  {
 
     @FXML
     private void HandleHistory() throws IOException {
+    	try {
     	Parent root = FXMLLoader.load(getClass().getResource("/com/example/parkinglottool/History.fxml"));
         Scene scene = new Scene(root);
 
@@ -86,6 +90,10 @@ public class Home_User_Controller implements Initializable  {
         // Set the login page scene and show the stage
         currentStage.setScene(scene);
         currentStage.show();
+    	}
+    	catch(Exception e) {
+    		error_label.setText("No History available!");
+    	}
     }
     
     @FXML
@@ -151,8 +159,8 @@ public class Home_User_Controller implements Initializable  {
             showErrorAlert("Error!", "This " + Logedinuser + " is not disabled and cannot reserve this parking type.");
         } else if (Objects.equals(getGender(Logedinuser), "male") && parkingTypeName.equals("Women")) {
             showErrorAlert("Error", "This parking can't be reserved for " + Logedinuser + ". It is for women only!");
-        } else if (!date.isEqual(currentDate) && !date.isEqual(currentDate.plusDays(1)))  {
-            showErrorAlert("ERROR", "The date must be today!");
+        } else if (!date.isEqual(currentDate) && !date.isEqual(currentDate.plusDays(365)))  {
+            showErrorAlert("ERROR", "The date must be within a year from today!");
         }else if (gettyp(Logedinuser) == 2 && previousReservationDate != null && date.equals(previousReservationDate)) {
             showErrorAlert("ERROR", "Only one reservation per day is allowed.");
         }else if (!isAvailable) {
