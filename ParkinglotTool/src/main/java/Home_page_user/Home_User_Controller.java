@@ -76,6 +76,11 @@ public class Home_User_Controller implements Initializable  {
     String Logedinuser = LoginController.un;
     /////////////////
     @FXML
+    private Label User_lable;
+    String usernamelable = LoginController.un;
+
+    ///////////
+    @FXML
     void Date_Selecter(ActionEvent event) {
         LocalDate selectedDate = Date_Selecter.getValue();
 
@@ -436,6 +441,7 @@ public static boolean hasReservationOnDate(int userId, LocalDate date) throws SQ
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        User_lable.setText(usernamelable);
         ToggleGroup toggleGroup = new ToggleGroup();
         Parking00.setToggleGroup(toggleGroup);
         Parking01.setToggleGroup(toggleGroup);

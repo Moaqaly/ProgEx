@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleButton?>
@@ -17,9 +18,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_user.Home_User_Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_user.Home_User_Controller">
    <right>
-      <AnchorPane prefHeight="937.0" prefWidth="743.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="937.0" prefWidth="743.0" style="-fx-background-color: #34323d;" BorderPane.alignment="CENTER">
          <GridPane gridLinesVisible="true" layoutX="10.0" layoutY="12.0" prefHeight="387.0" prefWidth="729.0">
             <columnConstraints>
                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -34,12 +35,12 @@
             </rowConstraints>
             <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="140.0" style="-fx-background-color: #ffc857;" />
          </GridPane>
-         <ImageView fitHeight="90.0" fitWidth="100.0" layoutX="550.0" layoutY="417.0">
+         <ImageView fitHeight="81.0" fitWidth="96.0" layoutX="554.0" layoutY="420.0">
             <image>
                <Image url="@Icon/information-button.png" />
             </image>
          </ImageView>
-         <Button fx:id="Book_now_Button" layoutX="193.0" layoutY="756.0" mnemonicParsing="false" onAction="#Book_now_ButtonOnAction" prefHeight="93.0" prefWidth="283.0" style="-fx-background-radius: 90;" styleClass="Style.css" text="Book Now">
+         <Button fx:id="Book_now_Button" layoutX="239.0" layoutY="762.0" mnemonicParsing="false" onAction="#Book_now_ButtonOnAction" prefHeight="93.0" prefWidth="283.0" style="-fx-background-radius: 90; -fx-background-color: #000f2a;" styleClass="Style.css" text="Book Now">
             <font>
                <Font name="Agency FB Bold" size="31.0" />
             </font>
@@ -51,9 +52,9 @@
                            <Color />
                         </color>
                      </Stop>
-                     <Stop offset="0.5823170731707317">
+                     <Stop offset="0.006711409395973154">
                         <color>
-                           <Color red="0.2763157784938812" green="0.11896929889917374" blue="0.11896929889917374" />
+                           <Color red="0.6052631735801697" green="0.5996588468551636" blue="0.5996588468551636" />
                         </color>
                      </Stop>
                      <Stop offset="1.0">
@@ -64,6 +65,13 @@
                   </stops>
                </RadialGradient>
             </textFill>
+            <graphic>
+               <ImageView fitHeight="50.0" fitWidth="59.0">
+                  <image>
+                     <Image url="@Icon/booking_2636399.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <TableView fx:id="info_List" layoutX="470.0" layoutY="512.0" prefHeight="90.0" prefWidth="264.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
             <columns>
@@ -88,99 +96,152 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="140.0" style="-fx-background-color: #ffc857;" />
-            <ToggleButton fx:id="Parking11" mnemonicParsing="false" onAction="#Parking11user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ToggleButton fx:id="Parking00" mnemonicParsing="false" onAction="#Parking00user" prefHeight="101.0" prefWidth="247.0" />
-            <ToggleButton fx:id="Parking10" mnemonicParsing="false" onAction="#Parking10user" prefHeight="101.0" prefWidth="247.0" GridPane.rowIndex="1" />
-            <ImageView fitHeight="92.0" fitWidth="103.0">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="103.0" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
-            <ToggleButton fx:id="Parking01" mnemonicParsing="false" onAction="#Parking01user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="1" />
-            <ToggleButton fx:id="Parking02" mnemonicParsing="false" onAction="#Parking02user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="2" />
-            <ToggleButton fx:id="Parking12" layoutX="256.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking12user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ToggleButton fx:id="Parking20" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking20user" prefHeight="101.0" prefWidth="247.0" GridPane.rowIndex="2" />
-            <ToggleButton fx:id="Parking22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking22user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fitHeight="92.0" fitWidth="103.0" layoutX="81.0" layoutY="109.0" GridPane.columnIndex="2">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="103.0" layoutX="327.0" layoutY="13.0" GridPane.columnIndex="1">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
+            <ToggleButton fx:id="Parking11" mnemonicParsing="false" onAction="#Parking11user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking00" mnemonicParsing="false" onAction="#Parking00user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking10" mnemonicParsing="false" onAction="#Parking10user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking01" mnemonicParsing="false" onAction="#Parking01user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking02" mnemonicParsing="false" onAction="#Parking02user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking12" layoutX="256.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking12user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #efdfbb;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="103.0">
+                     <image>
+                        <Image url="@Icon/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking20" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking20user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #a79bc7;" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="88.0">
+                     <image>
+                        <Image url="@Icon/Women.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking22" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Parking22user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #a79bc7;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="88.0">
+                     <image>
+                        <Image url="@Icon/Women.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
             <ImageView fitHeight="78.0" fitWidth="88.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@Icon/Women.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="78.0" fitWidth="88.0" layoutX="335.0" layoutY="213.0" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@Icon/Women.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="78.0" fitWidth="88.0" layoutX="89.0" layoutY="213.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@Icon/Women.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="103.0" layoutX="81.0" layoutY="109.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="92.0" fitWidth="103.0" layoutX="81.0" layoutY="13.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@Icon/car.png" />
-               </image>
-            </ImageView>
-            <ToggleButton fx:id="Parking31" mnemonicParsing="false" onAction="#Parking31user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ToggleButton fx:id="Parking30" mnemonicParsing="false" onAction="#Parking30user" prefHeight="101.0" prefWidth="247.0" GridPane.rowIndex="3" />
-            <ToggleButton fx:id="Parking32" mnemonicParsing="false" onAction="#Parking32user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ToggleButton fx:id="Parking21" mnemonicParsing="false" onAction="#Parking21user" prefHeight="101.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fitHeight="78.0" fitWidth="88.0" layoutX="89.0" layoutY="213.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@Icon/Women.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="91.0" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@Icon/disabled.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="91.0" layoutX="88.0" layoutY="312.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@Icon/disabled.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="73.0" fitWidth="91.0" layoutX="334.0" layoutY="312.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@Icon/disabled.png" />
-               </image>
-            </ImageView>
+            <ToggleButton fx:id="Parking31" mnemonicParsing="false" onAction="#Parking31user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #ffc857;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="91.0">
+                     <image>
+                        <Image url="@Icon/disabled.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking30" mnemonicParsing="false" onAction="#Parking30user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #ffc857;" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="91.0">
+                     <image>
+                        <Image url="@Icon/disabled.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking32" mnemonicParsing="false" onAction="#Parking32user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #ffc857;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="73.0" fitWidth="91.0">
+                     <image>
+                        <Image url="@Icon/disabled.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="Parking21" mnemonicParsing="false" onAction="#Parking21user" prefHeight="101.0" prefWidth="247.0" style="-fx-background-color: #a79bc7;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="78.0" fitWidth="88.0">
+                     <image>
+                        <Image url="@Icon/Women.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
          </GridPane>
       </AnchorPane>
    </right>
    <center>
-      <AnchorPane prefHeight="937.0" prefWidth="257.0" style="-fx-background-color: #412234;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="937.0" prefWidth="257.0" style="-fx-background-color: #4d5d53;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Logout_Button" layoutX="14.0" layoutY="847.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="49.0" prefWidth="244.0" style="-fx-background-color: #ffc857;" styleClass="Style.css" text="Logout" textFill="WHITE">
+            <Button fx:id="Logout_Button" layoutX="4.0" layoutY="847.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="74.0" prefWidth="254.0" style="-fx-background-color: #960018;" styleClass="Style.css" text="Logout" textFill="WHITE">
                <font>
-                  <Font name="Agency FB Bold" size="23.0" />
+                  <Font name="Agency FB Bold" size="31.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="47.0">
+                     <image>
+                        <Image url="@Icon/icons8-logout-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="History_button" layoutX="10.0" layoutY="482.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="95.0" prefWidth="249.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
+            <Button fx:id="History_button" layoutX="10.0" layoutY="482.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="95.0" prefWidth="251.0" style="-fx-background-color: #ffc857;" text="History" textFill="WHITE">
                <font>
-                  <Font name="Agency FB Bold" size="21.0" />
+                  <Font name="Agency FB Bold" size="32.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="41.0">
+                     <image>
+                        <Image url="@Icon/icons8-history-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
+            <Label fx:id="User_lable1" alignment="CENTER" layoutX="-3.0" layoutY="211.0" prefHeight="69.0" prefWidth="269.0" text="Hello " textFill="#f8f8f8">
+               <font>
+                  <Font name="Agency FB Bold" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="User_lable" alignment="CENTER" layoutX="1.0" layoutY="293.0" prefHeight="70.0" prefWidth="263.0" text="User" textFill="#f8f8f8">
+               <font>
+                  <Font name="Agency FB Bold" size="56.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="158.0" fitWidth="209.0" layoutX="27.0" layoutY="28.0">
+               <image>
+                  <Image url="@Icon/Logo.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </center>
 </BorderPane>

@@ -19,7 +19,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
+<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
    <right>
       <AnchorPane prefHeight="953.0" prefWidth="744.0" style="-fx-background-color: #4d5d53;" BorderPane.alignment="CENTER">
          <children>
@@ -168,11 +168,6 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button fx:id="Cancel_Booking" layoutX="281.0" layoutY="845.0" mnemonicParsing="false" onAction="#Cancel_Booking" prefHeight="59.0" prefWidth="180.0" style="-fx-background-color: #960018;" text="Cancel the Booking" textFill="#eeeeee">
-               <font>
-                  <Font name="Agency FB Bold" size="20.0" />
-               </font>
-            </Button>
             <Pane layoutX="115.0" layoutY="798.0" prefHeight="47.0" prefWidth="55.0" />
          </children></AnchorPane>
    </right>
@@ -180,7 +175,7 @@
       <AnchorPane prefHeight="794.0" prefWidth="355.0" style="-fx-background-color: #34323d;" BorderPane.alignment="CENTER">
          <Button fx:id="Logout_Button" layoutX="10.0" layoutY="811.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="103.0" prefWidth="251.0" style="-fx-background-color: #960018;" styleClass="Style.css" text="Logout">
             <font>
-               <Font name="Agency FB Bold" size="23.0" />
+               <Font name="Agency FB Bold" size="35.0" />
             </font>
             <textFill>
                <LinearGradient endX="0.7488151658767772" endY="0.5592417061611374" startX="0.7725118483412322">
@@ -208,23 +203,44 @@
                   </stops>
                </LinearGradient>
             </textFill>
+            <graphic>
+               <ImageView fitHeight="44.0" fitWidth="38.0">
+                  <image>
+                     <Image url="@Icon/icons8-logout-50.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <Button fx:id="History_button" layoutY="590.0" mnemonicParsing="false" onAction="#HandleHistory" prefHeight="72.0" prefWidth="271.0" style="-fx-background-color: #0a683f;" text="History" textFill="WHITE">
             <font>
                <Font name="Agency FB Bold" size="21.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="32.0" fitWidth="37.0">
+                  <image>
+                     <Image url="@Icon/icons8-history-30.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <Button fx:id="Add_User_Button" layoutX="2.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="122.0" prefWidth="268.0" style="-fx-background-color: #0a683f#0a683f;" text="Add User" textFill="WHITE">
             <font>
                <Font name="Agency FB Bold" size="19.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="39.0" fitWidth="40.0">
+                  <image>
+                     <Image url="@Icon/icons8-add-user-50.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <Label fx:id="User_lable" alignment="CENTER" layoutX="57.0" layoutY="235.0" prefHeight="70.0" prefWidth="157.0" text="Admin" textFill="#f8f8f8">
             <font>
                <Font name="Agency FB Bold" size="56.0" />
             </font>
          </Label>
-         <Label fx:id="User_lable1" alignment="CENTER" layoutX="73.0" layoutY="166.0" prefHeight="47.0" prefWidth="126.0" text="Hallo " textFill="#f8f8f8">
+         <Label fx:id="User_lable1" alignment="CENTER" layoutX="73.0" layoutY="166.0" prefHeight="47.0" prefWidth="126.0" text="Hello " textFill="#f8f8f8">
             <font>
                <Font name="Agency FB Bold" size="56.0" />
             </font>
