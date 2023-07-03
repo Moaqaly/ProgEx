@@ -8,14 +8,16 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="779.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_User.Add_User_Controller">
+<BorderPane prefHeight="779.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_User.Add_User_Controller">
    <right>
        <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
-           <TableView fx:id="User_List" prefHeight="398.0" prefWidth="971.0">
+           <TableView fx:id="User_List" layoutX="-3.0" prefHeight="404.0" prefWidth="978.0">
                <columns>
                    <TableColumn fx:id="Column_ID" prefWidth="48.0" text="ID" />
                    <TableColumn fx:id="Column_Name" prefWidth="96.0" text="Name" />
@@ -26,39 +28,117 @@
                    <TableColumn fx:id="Column_Role" prefWidth="161.0" text="Role" />
                </columns>
            </TableView>
-           <Button fx:id="remove_User_Button" layoutX="846.0" layoutY="413.0" mnemonicParsing="false" onAction="#handle_Remove_Button" prefHeight="57.0" prefWidth="106.0" text="Remove" textFill="#790d0d">
+           <Button fx:id="remove_User_Button" layoutX="825.0" layoutY="409.0" mnemonicParsing="false" onAction="#handle_Remove_Button" prefHeight="57.0" prefWidth="130.0" style="-fx-background-color: #960018;" text="Remove" textFill="WHITE">
             <font>
-               <Font name="System Bold" size="15.0" />
-            </font></Button>
-           <TextField fx:id="Name_Field" layoutX="20.0" layoutY="484.0" promptText="Enter name " />
-           <Button fx:id="edit_User_Button" layoutX="14.0" layoutY="417.0" mnemonicParsing="false" onAction="#handle_Edit_User_Button" prefHeight="47.0" prefWidth="160.0" text="Edit">
+               <Font name="Agency FB Bold" size="20.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="38.0" fitWidth="41.0">
+                  <image>
+                     <Image url="@Icon/icons8-delete-100%20(1).png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+           <TextField fx:id="Name_Field" layoutX="20.0" layoutY="484.0" prefHeight="25.0" prefWidth="153.0" promptText="Enter name " />
+           <Button fx:id="edit_User_Button" layoutX="15.0" layoutY="414.0" mnemonicParsing="false" onAction="#handle_Edit_User_Button" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #ffc857;" text="Edit">
             <font>
                <Font size="15.0" />
-            </font></Button>
+            </font>
+            <graphic>
+               <ImageView fitHeight="35.0" fitWidth="45.0">
+                  <image>
+                     <Image url="@Icon/icons8-edit-50.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
            <TextField fx:id="Email_Field" layoutX="20.0" layoutY="527.0" promptText="Enter Email" />
            <PasswordField fx:id="Password_Field" layoutX="20.0" layoutY="609.0" promptText="Enter Password" />
            <PasswordField fx:id="rePassword_Field" layoutX="20.0" layoutY="650.0" promptText="renter the Password" />
-           <ChoiceBox fx:id="Choicebox_Gender" layoutX="186.0" layoutY="484.0" prefWidth="150.0" />
-           <ChoiceBox fx:id="Choicebox_Role" layoutX="186.0" layoutY="540.0" prefWidth="150.0" />
-           <Label layoutX="232.0" layoutY="462.0" prefHeight="17.0" prefWidth="40.0" text="Gender" textFill="#dbdbdb" />
-           <Label layoutX="241.0" layoutY="519.0" text="Role" textFill="WHITE" />
-           <ToggleButton fx:id="Disability_Button" layoutX="214.0" layoutY="599.0" mnemonicParsing="false" onAction="#handle_disability_Button" prefHeight="45.0" prefWidth="95.0" text="Disability" />
-           <TextField fx:id="User_Name_Field" layoutX="20.0" layoutY="567.0" promptText="Enter User name " />
-         <Button fx:id="register_Button" layoutX="389.0" layoutY="698.0" mnemonicParsing="false" onAction="#handle_Register_Button" prefHeight="54.0" prefWidth="164.0" text="Register">
+           <ChoiceBox fx:id="Choicebox_Gender" layoutX="187.0" layoutY="484.0" prefWidth="150.0" />
+           <ChoiceBox fx:id="Choicebox_Role" layoutX="186.0" layoutY="567.0" prefWidth="150.0" />
+           <Label layoutX="204.0" layoutY="449.0" prefHeight="30.0" prefWidth="114.0" text="Gender" textFill="#dbdbdb">
             <font>
-               <Font name="System Bold" size="19.0" />
-            </font></Button>
-         <Button fx:id="refresh_Button" layoutX="397.0" layoutY="410.0" mnemonicParsing="false" onAction="#handle_Refresh_Button" prefHeight="54.0" prefWidth="168.0" text="Refresh">
+               <Font name="System Bold" size="20.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="21.0" fitWidth="29.0">
+                  <image>
+                     <Image url="@Icon/icons8-gender-50.png" />
+                  </image>
+               </ImageView>
+            </graphic></Label>
+           <Label layoutX="222.0" layoutY="523.0" prefHeight="39.0" prefWidth="82.0" text="Role" textFill="WHITE">
+            <font>
+               <Font name="Agency FB Bold" size="20.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="21.0" fitWidth="27.0">
+                  <image>
+                     <Image url="@Icon/icons8-role-66.png" />
+                  </image>
+               </ImageView>
+            </graphic></Label>
+           <ToggleButton fx:id="Disability_Button" layoutX="192.0" layoutY="625.0" mnemonicParsing="false" onAction="#handle_disability_Button" prefHeight="50.0" prefWidth="142.0" text="Disability">
+            <font>
+               <Font name="Agency FB Bold" size="20.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="34.0">
+                  <image>
+                     <Image url="@Icon/icons8-disabilities-50%20(1).png" />
+                  </image>
+               </ImageView>
+            </graphic></ToggleButton>
+           <TextField fx:id="User_Name_Field" layoutX="20.0" layoutY="567.0" promptText="Enter User name " />
+         <Button fx:id="register_Button" layoutX="364.0" layoutY="689.0" mnemonicParsing="false" onAction="#handle_Register_Button" prefHeight="69.0" prefWidth="244.0" style="-fx-background-color: #000f2a; -fx-background-radius: 70;" text="Register" textFill="WHITE">
+            <font>
+               <Font name="Agency FB Bold" size="27.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="41.0" fitWidth="43.0">
+                  <image>
+                     <Image url="@Icon/icons8-add-user-50.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="refresh_Button" layoutX="397.0" layoutY="410.0" mnemonicParsing="false" onAction="#handle_Refresh_Button" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #0a683f;" text="Refresh" textFill="WHITE">
             <font>
                <Font name="System Bold" size="15.0" />
-            </font></Button>
+            </font>
+            <graphic>
+               <ImageView fitHeight="42.0" fitWidth="57.0">
+                  <image>
+                     <Image url="@Icon/icons8-refresh-64.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
        </AnchorPane>
    </right>
    <left>
-       <AnchorPane prefHeight="779.0" prefWidth="295.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
-           <Button fx:id="Back_Button_add_User" layoutX="1.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleBackButtonAdd" prefHeight="51.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
-         <Button fx:id="Search_button" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#handle_Search" style="-fx-background-radius: 90;" text="Search" />
-         <TextField fx:id="Search_text" layoutX="72.0" layoutY="44.0" prefHeight="25.0" prefWidth="209.0" style="-fx-background-radius: 30;" />
+       <AnchorPane prefHeight="779.0" prefWidth="295.0" style="-fx-background-color: #34323d;" BorderPane.alignment="CENTER">
+           <Button fx:id="Back_Button_add_User" layoutX="1.0" layoutY="672.0" mnemonicParsing="false" onAction="#handleBackButtonAdd" prefHeight="51.0" prefWidth="293.0" style="-fx-background-color: #000f2a;" text="Back" textFill="WHITE">
+            <font>
+               <Font name="Agency FB Bold" size="29.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="36.0" fitWidth="55.0">
+                  <image>
+                     <Image url="@Icon/icons8-back-64.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="Search_button" layoutX="87.0" layoutY="82.0" mnemonicParsing="false" onAction="#handle_Search" prefHeight="28.0" prefWidth="122.0" style="-fx-background-radius: 90; -fx-background-color: #0a683f;" text="Search" textFill="WHITE">
+            <graphic>
+               <ImageView fitHeight="18.0" fitWidth="24.0">
+                  <image>
+                     <Image url="@Icon/icons8-search-64.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            <font>
+               <Font name="Agency FB" size="18.0" />
+            </font></Button>
+         <TextField fx:id="Search_text" layoutX="5.0" layoutY="44.0" prefHeight="25.0" prefWidth="286.0" promptText="Search" style="-fx-background-radius: 30;" />
        </AnchorPane>
    </left>
 </BorderPane>

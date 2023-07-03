@@ -67,7 +67,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label fx:id="LoginMassege" alignment="CENTER" layoutX="182.0" layoutY="490.0" prefHeight="17.0" prefWidth="215.0" textAlignment="CENTER" textFill="#c60e0e">
+            <Label fx:id="LoginMassege" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="490.0" prefHeight="17.0" prefWidth="215.0" textAlignment="CENTER" textFill="#d70909">
                <font>
                   <Font name="Agency FB" size="15.0" />
                </font>

@@ -18,6 +18,8 @@ import org.mindrot.jbcrypt.BCrypt;
 
 import Mysql.DatabaseConnection;
 
+import static Home_page_admin.Home_Admin_Controller.showErrorAlert;
+
 public class LoginController {
 
 
@@ -43,7 +45,7 @@ public class LoginController {
 /////////
    public static String un = "leer";
     public void LoginButtonOnAction(ActionEvent e) throws IOException {
-        if(UsernameTextfeld.getText().isEmpty() || PasswordTextfeld.getText().isEmpty()) {error_label.setText("Please fill out all fields");}
+        if(UsernameTextfeld.getText().isEmpty() || PasswordTextfeld.getText().isEmpty()) {showErrorAlert("Error","Please fill out all fields");}
         else if (UsernameTextfeld.getText().equals("Admin") && PasswordTextfeld.getText().equals("Admin")) {
             System.out.println("Admin angemeldet");
             Parent root = FXMLLoader.load(getClass().getResource("/com/example/parkinglottool/Home_Admin.fxml"));
@@ -83,7 +85,8 @@ public class LoginController {
                     role = rs.getString("isAdmin");
                 }
                 if(un.equals("leer")) {
-                    error_label.setText("Username does not exist");
+                    showErrorAlert("Error","Username does not exist");
+
                 }
                 boolean b = BCrypt.checkpw(PasswordTextfeld.getText(), ps);
                 if(b) {
@@ -117,7 +120,7 @@ public class LoginController {
 
 
                 }
-                else error_label.setText("Wrong password");
+                else  showErrorAlert("Error","Wrong password!");
 
                 System.out.println(un);
                 System.out.println(ps);
