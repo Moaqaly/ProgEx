@@ -186,71 +186,9 @@ public class Home_User_Controller implements Initializable  {
             showErrorAlert("ERROR"," !!");
         }
     }
-    @FXML
-    void Cancel_Booking(ActionEvent event) throws SQLException {
 
 
 
-        LocalDate date = Date_Selecter.getValue();
-        int spaceID = 0;
-        if (Parking00.isSelected()) {
-            spaceID = 1;
-        } else if (Parking01.isSelected()) {
-            spaceID = 2;
-        } else if (Parking02.isSelected()) {
-            spaceID = 3;
-        } else if (Parking10.isSelected()) {
-            spaceID = 4;
-        } else if (Parking11.isSelected()) {
-            spaceID = 5;
-        } else if (Parking12.isSelected()) {
-            spaceID = 6;
-        } else if (Parking20.isSelected()) {
-            spaceID = 7;
-        } else if (Parking21.isSelected()) {
-            spaceID = 8;
-        } else if (Parking22.isSelected()) {
-            spaceID = 9;
-        } else if (Parking30.isSelected()) {
-            spaceID = 10;
-        } else if (Parking31.isSelected()) {
-            spaceID = 11;
-        } else if (Parking32.isSelected()) {
-            spaceID = 12;
-        }
-
-        // Get the user ID
-         // Assuming the User_selecter_list returns an object with a getUsername() method
-        int userID = getUserId(Logedinuser);
-
-        cancelReservation(userID, date, spaceID);
-
-
-    }
-
-    //////////
-    public static boolean cancelReservation(int userID, LocalDate reservationDate, int spaceID) {
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(
-                     "DELETE FROM reservation WHERE UserID = ? AND ReservationDate = ? AND SpaceID = ?")
-        ) {
-            statement.setInt(1, userID);
-            statement.setDate(2, java.sql.Date.valueOf(reservationDate));
-            statement.setInt(3, spaceID);
-
-            int rowsAffected = statement.executeUpdate();
-            if (rowsAffected > 0) {
-                showInfoAlert("Cancellation Successful", "Booking has been canceled.");
-                return true;
-            } else {
-                showErrorAlert("Cancellation Failed", "Unable to cancel the booking.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            showErrorAlert("Error", "An error occurred while canceling the booking.");
-        }
-        return false;
-    }
     @FXML
     private void Book_now_ButtonOnAction(ActionEvent event) throws SQLException {
 

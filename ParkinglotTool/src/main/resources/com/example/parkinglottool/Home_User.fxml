@@ -166,7 +166,6 @@
                </image>
             </ImageView>
          </GridPane>
-         <Button fx:id="Cancel_Booking" layoutX="62.0" layoutY="711.0" mnemonicParsing="false" onAction="#Cancel_Booking" prefHeight="45.0" prefWidth="131.0" text="Cancel the Booking" />
       </AnchorPane>
    </right>
    <center>
