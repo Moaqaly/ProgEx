@@ -4,7 +4,7 @@ module com.example.parkinglottool {
     requires javafx.graphics;
     requires AnimateFX;
     requires java.sql;
-    requires jBCrypt;
+    //requires jBCrypt;
     requires mysql.connector.j;
 
     opens Home_page_user;
