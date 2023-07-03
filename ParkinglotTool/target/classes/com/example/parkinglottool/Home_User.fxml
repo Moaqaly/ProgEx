@@ -74,7 +74,7 @@
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
          </TableView>
-         <DatePicker fx:id="Date_Selecter" layoutX="14.0" layoutY="447.0" prefHeight="44.0" prefWidth="211.0" promptText="Select Date" style="-fx-background-radius: 90;" />
+         <DatePicker fx:id="Date_Selecter" layoutX="14.0" layoutY="447.0" onAction="#Date_Selecter" prefHeight="44.0" prefWidth="211.0" promptText="Select Date" style="-fx-background-radius: 90;" />
          <GridPane fx:id="ToggleGroup" gridLinesVisible="true" layoutX="12.0" layoutY="13.0" prefHeight="386.0" prefWidth="737.0">
             <columnConstraints>
                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

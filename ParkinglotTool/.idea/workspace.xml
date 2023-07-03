@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93c5908b-280c-43e1-a64d-e2f22c41fcf2" name="Changes" comment="" />
+    <list default="true" id="93c5908b-280c-43e1-a64d-e2f22c41fcf2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Home_page_user/Home_User_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Home_page_user/Home_User_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/parkinglottool/Home_User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/parkinglottool/Home_User.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Home_page_user/Home_User_Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Home_page_user/Home_User_Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Home_page_user/Home_User_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Home_page_user/Home_User_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/parkinglottool/Home_User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/parkinglottool/Home_User.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,15 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/m0063/Documents/GitHub/ProgEx/ParkinglotTool&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/m0063/Documents/GitHub/ProgEx/ParkinglotTool",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
-  <component name="RunManager" selected="Application.Home_Admin">
+}]]></component>
+  <component name="RunManager" selected="Application.LoginApplication">
     <configuration name="Home_Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Home_page_admin.Home_Admin" />
       <module name="ParkinglotTool" />
@@ -79,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Home_Admin" />
         <item itemvalue="Application.LoginApplication" />
+        <item itemvalue="Application.Home_Admin" />
       </list>
     </recent_temporary>
   </component>
@@ -94,7 +105,7 @@
       <updated>1688406642155</updated>
       <workItem from="1688406643874" duration="15000" />
       <workItem from="1688406708055" duration="58000" />
-      <workItem from="1688406776692" duration="240000" />
+      <workItem from="1688406776692" duration="571000" />
     </task>
     <servers />
   </component>
