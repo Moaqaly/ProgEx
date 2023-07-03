@@ -29,6 +29,13 @@ import javafx.fxml.FXMLLoader;
 
 
 public class HistoryControllerAdmin implements Initializable {
+	
+	ObservableList<HistoryDataAdmin> DataList = FXCollections.observableArrayList();
+	ObservableList<HistoryDataAdmin> DataList2 = FXCollections.observableArrayList();
+	ObservableList<HistoryDataAdmin> TDataList = FXCollections.observableArrayList();
+	ObservableList<HistoryDataAdmin> TDataList2 = FXCollections.observableArrayList();
+	
+	
 	@FXML
 	private Button Back_Button;
 	
@@ -80,8 +87,10 @@ public class HistoryControllerAdmin implements Initializable {
 	}
 	
 	public void load() {
-		ObservableList<HistoryDataAdmin> DataList = FXCollections.observableArrayList();
-		ObservableList<HistoryDataAdmin> DataList2 = FXCollections.observableArrayList();
+		
+		
+		LocalDate ld = LocalDate.now();
+	    String localdate = ld.toString();
 		String space = "leer";
 	    String date = "leer";
 	    int user;
@@ -102,11 +111,12 @@ public class HistoryControllerAdmin implements Initializable {
             	while(rs2.next()) {
             		username = rs2.getString("Username");
             	}
-            	System.out.println("Username: " + username);
             	HistoryDataAdmin data = new HistoryDataAdmin(space, date, username);
         		DataList.add(data);
+        		if(date.equals(localdate)) TDataList.add(data);
         		if(user==getUserId(LoginController.un)) {
         			DataList2.add(data);
+        			if(date.equals(localdate)) TDataList2.add(data);
         		}
             	}
             }
@@ -118,12 +128,113 @@ public class HistoryControllerAdmin implements Initializable {
 		if(!DataList.isEmpty()) {
 			ReservationHistory.setItems(DataList);
 			ReservationFuture.setItems(DataList2);
+			
 		}
 		
 		
 	}
 	
 	
+	@FXML
+	private void handletoday(){
+		ReservationFuture.getItems().clear();
+		ReservationHistory.getItems().clear();
+		
+		TDataList.clear();
+		TDataList2.clear();
+		DataList.clear();
+		DataList2.clear();
+		
+		LocalDate ld = LocalDate.now();
+	    String localdate = ld.toString();
+		String space = "leer";
+	    String date = "leer";
+	    int user;
+	    String username = "leer";
+		Connection con = DatabaseConnection.getConnection(); // Use your existing method to get a database connection
+		LocalDate currentDate = LocalDate.now();
+		System.out.println("CurrentDate:" +currentDate);
+		try(Statement stm = con.createStatement()) {
+            String s = "SELECT * FROM reservation ";
+            ResultSet rs = stm.executeQuery(s);
+            while (rs.next()) {
+            	date = rs.getString("ReservationDate");
+            	space = rs.getString("SpaceID");
+            	user = rs.getInt("UserID");
+            	try(Statement stm2 = con.createStatement()){
+            	String h ="SELECT Username FROM users WHERE ID = " + user;
+            	ResultSet rs2 = stm2.executeQuery(h);
+            	while(rs2.next()) {
+            		username = rs2.getString("Username");
+            	}
+            	HistoryDataAdmin data = new HistoryDataAdmin(space, date, username);
+        		DataList.add(data);
+        		if(date.equals(localdate)) TDataList.add(data);
+        		if(user==getUserId(LoginController.un)) {
+        			DataList2.add(data);
+        			if(date.equals(localdate)) TDataList2.add(data);
+        		}
+            	}
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
+		
+		ReservationHistory.setItems(TDataList);
+		ReservationFuture.setItems(TDataList2);
+
+	}
+	
+	@FXML
+	private void handleall() {
+		ReservationFuture.getItems().clear();
+		ReservationHistory.getItems().clear();
+		
+		TDataList.clear();
+		TDataList2.clear();
+		DataList.clear();
+		DataList2.clear();
+		
+		LocalDate ld = LocalDate.now();
+	    String localdate = ld.toString();
+		String space = "leer";
+	    String date = "leer";
+	    int user;
+	    String username = "leer";
+		Connection con = DatabaseConnection.getConnection(); // Use your existing method to get a database connection
+		LocalDate currentDate = LocalDate.now();
+		System.out.println("CurrentDate:" +currentDate);
+		try(Statement stm = con.createStatement()) {
+            String s = "SELECT * FROM reservation ";
+            ResultSet rs = stm.executeQuery(s);
+            while (rs.next()) {
+            	date = rs.getString("ReservationDate");
+            	space = rs.getString("SpaceID");
+            	user = rs.getInt("UserID");
+            	try(Statement stm2 = con.createStatement()){
+            	String h ="SELECT Username FROM users WHERE ID = " + user;
+            	ResultSet rs2 = stm2.executeQuery(h);
+            	while(rs2.next()) {
+            		username = rs2.getString("Username");
+            	}
+            	HistoryDataAdmin data = new HistoryDataAdmin(space, date, username);
+        		DataList.add(data);
+        		if(date.equals(localdate)) TDataList.add(data);
+        		if(user==getUserId(LoginController.un)) {
+        			DataList2.add(data);
+        			if(date.equals(localdate)) TDataList2.add(data);
+        		}
+            	}
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
+		
+		ReservationHistory.setItems(DataList);
+		ReservationFuture.setItems(DataList2);
+	}
 	
 	
 	

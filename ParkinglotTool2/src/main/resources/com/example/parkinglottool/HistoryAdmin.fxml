@@ -12,14 +12,14 @@
       <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="error_label" layoutX="282.0" layoutY="679.0" textFill="RED" />
-            <TableView fx:id="ReservationHistory" layoutY="30.0" prefHeight="423.0" prefWidth="790.0">
+            <TableView fx:id="ReservationHistory" layoutX="11.0" layoutY="28.0" prefHeight="425.0" prefWidth="779.0">
               <columns>
                 <TableColumn fx:id="ParkingSpaceColumn" prefWidth="213.0" text="Parking Space" />
                 <TableColumn fx:id="DateColumn" prefWidth="259.0" text="Date" />
                   <TableColumn fx:id="UsernameColumn" prefWidth="317.0" text="Username" />
               </columns>
             </TableView>
-            <TableView fx:id="ReservationFuture" layoutX="1.0" layoutY="473.0" prefHeight="357.0" prefWidth="791.0">
+            <TableView fx:id="ReservationFuture" layoutX="11.0" layoutY="468.0" prefHeight="362.0" prefWidth="781.0">
               <columns>
                 <TableColumn fx:id="FParkingSpaceColumn" prefWidth="380.0" text="Parking Space" />
                 <TableColumn fx:id="FDateColumn" prefWidth="412.0" text="Date" />
@@ -33,7 +33,9 @@
    <left>
       <AnchorPane prefHeight="779.0" prefWidth="295.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Back_Button" layoutY="444.0" mnemonicParsing="false" onAction="#handleBackButtonHistory" prefHeight="51.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
+            <Button fx:id="Back_Button" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleBackButtonHistory" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
+            <Button layoutX="10.0" layoutY="374.0" mnemonicParsing="false" onAction="#handletoday" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Only show reservations for today" />
+            <Button layoutX="10.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleall" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Show all reservations" />
          </children>
       </AnchorPane>
    </left>
