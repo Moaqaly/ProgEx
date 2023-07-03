@@ -252,9 +252,7 @@ public class Home_User_Controller implements Initializable  {
             showErrorAlert("Error!", "This " + Logedinuser + " is not disabled and cannot reserve this parking type.");
         } else if (Objects.equals(getGender(Logedinuser), "male") && parkingTypeName.equals("Women")) {
             showErrorAlert("Error", "This parking can't be reserved for " + Logedinuser + ". It is for women only!");
-        } else if (!date.isEqual(currentDate) && !date.isEqual(currentDate.plusDays(1)))  {
-            showErrorAlert("ERROR", "The date must be today or tomorrow!");
-        }else if (getusertyp(Logedinuser)==2 && previousReservationDate != null && date.equals(previousReservationDate) ) {
+        } else if (getusertyp(Logedinuser)==2 && previousReservationDate != null && date.equals(previousReservationDate) ) {
             showErrorAlert("ERROR", "Only one reservation per day is allowed.");
         }
         else if (!isAvailable) {

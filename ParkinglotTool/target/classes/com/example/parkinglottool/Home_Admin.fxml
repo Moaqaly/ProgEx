@@ -19,7 +19,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
+<BorderPane fx:id="Admin_BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_admin.Home_Admin_Controller">
    <right>
       <AnchorPane prefHeight="953.0" prefWidth="744.0" style="-fx-background-color: #4d5d53;" BorderPane.alignment="CENTER">
          <children>
@@ -147,7 +147,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TableView fx:id="info_List" layoutX="472.0" layoutY="518.0" prefHeight="65.0" prefWidth="267.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="518.0">
+            <TableView fx:id="info_List" layoutX="460.0" layoutY="518.0" prefHeight="71.0" prefWidth="279.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="518.0">
                <columns>
                   <TableColumn fx:id="Parkinglot_nummber" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Parking lot Number" />
                   <TableColumn fx:id="Parkinglot_Typ" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Typ" />

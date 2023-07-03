@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -13,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="779.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_User.Add_User_Controller">
+<BorderPane prefHeight="779.0" prefWidth="1269.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_User.Add_User_Controller">
    <right>
        <AnchorPane prefHeight="779.0" prefWidth="972.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
            <TableView fx:id="User_List" prefHeight="398.0" prefWidth="971.0">
@@ -53,7 +52,6 @@
             <font>
                <Font name="System Bold" size="15.0" />
             </font></Button>
-         <RadioButton fx:id="Disable" layoutX="209.0" layoutY="667.0" mnemonicParsing="false" text="RadioButton" />
        </AnchorPane>
    </right>
    <left>

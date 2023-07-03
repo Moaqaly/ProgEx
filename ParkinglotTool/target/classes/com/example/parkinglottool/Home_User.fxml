@@ -17,7 +17,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_user.Home_User_Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home_page_user.Home_User_Controller">
    <right>
       <AnchorPane prefHeight="937.0" prefWidth="743.0" style="-fx-background-color: #ffc857;" BorderPane.alignment="CENTER">
          <GridPane gridLinesVisible="true" layoutX="10.0" layoutY="12.0" prefHeight="387.0" prefWidth="729.0">
@@ -65,7 +65,7 @@
                </RadialGradient>
             </textFill>
          </Button>
-         <TableView fx:id="info_List" layoutX="470.0" layoutY="518.0" prefHeight="84.0" prefWidth="260.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
+         <TableView fx:id="info_List" layoutX="470.0" layoutY="512.0" prefHeight="90.0" prefWidth="264.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true">
             <columns>
                <TableColumn fx:id="Parkinglot_nummber" prefWidth="146.0" style="-fx-background-color: #c9d6ed;" text="Parking lot Number" />
                <TableColumn fx:id="Parkinglot_Typ" prefWidth="112.0" style="-fx-background-color: #c9d6ed;" text="Typ" />
@@ -166,7 +166,6 @@
                </image>
             </ImageView>
          </GridPane>
-         <Button fx:id="Cancel_Booking" layoutX="62.0" layoutY="711.0" mnemonicParsing="false" onAction="#Cancel_Booking" prefHeight="45.0" prefWidth="131.0" text="Cancel the Booking" />
       </AnchorPane>
    </right>
    <center>
