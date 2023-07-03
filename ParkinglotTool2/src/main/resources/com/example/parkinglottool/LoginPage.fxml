@@ -49,44 +49,41 @@
                   <Image url="@Icon/user.png" />
                </image>
             </ImageView>
-            <Label fx:id="error_label" layoutX="269.0" layoutY="500.0" />
+            <Label fx:id="error_label" alignment="CENTER" layoutX="196.0" layoutY="500.0" prefHeight="17.0" prefWidth="188.0" textAlignment="CENTER" textFill="RED" />
          </children>
       </AnchorPane>
    </center>
    <right>
-      <AnchorPane prefHeight="801.0" prefWidth="382.0" style="-fx-background-color: #2e4052;"
-                  BorderPane.alignment="CENTER">
-         <Label fx:id="loginlabel" alignment="CENTER" layoutX="60.0" layoutY="106.0" prefHeight="121.0"
-                prefWidth="262.0" style="-fx-border-radius: 90;" text="login">
+      <AnchorPane prefHeight="801.0" prefWidth="382.0" style="-fx-background-color: #2e4052;" BorderPane.alignment="CENTER">
+         <Label fx:id="loginlabel" alignment="CENTER" layoutX="60.0" layoutY="106.0" prefHeight="121.0" prefWidth="262.0" style="-fx-border-radius: 90;" text="login">
             <textFill>
-               <LinearGradient endX="0.7962085308056872" endY="0.7677725118483412" startX="0.7772511848341233"
-                               startY="0.03791469194312799">
+               <LinearGradient endX="0.7962085308056872" endY="0.7677725118483412" startX="0.7772511848341233" startY="0.03791469194312799">
                   <stops>
                      <Stop>
                         <color>
-                           <Color/>
+                           <Color />
                         </color>
                      </Stop>
                      <Stop offset="0.39939024390243894">
                         <color>
-                           <Color red="0.4295808970928192" green="0.4636330306529999" blue="0.5657894611358643"/>
+                           <Color red="0.4295808970928192" green="0.4636330306529999" blue="0.5657894611358643" />
                         </color>
                      </Stop>
                      <Stop offset="1.0">
                         <color>
-                           <Color red="1.0" green="0.7843137383460999" blue="0.34117648005485535"/>
+                           <Color red="1.0" green="0.7843137383460999" blue="0.34117648005485535" />
                         </color>
                      </Stop>
                   </stops>
                </LinearGradient>
             </textFill>
             <font>
-               <Font name="Agency FB Bold" size="100.0"/>
+               <Font name="Agency FB Bold" size="100.0" />
             </font>
          </Label>
          <ImageView fitHeight="151.0" fitWidth="200.0" layoutX="91.0" layoutY="361.0">
             <image>
-               <Image url="@Icon/Parkinglot.png"/>
+               <Image url="@Icon/Parkinglot.png" />
             </image>
          </ImageView>
       </AnchorPane>

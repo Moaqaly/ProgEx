@@ -40,6 +40,15 @@ public class History_Controller implements Initializable {
     @FXML
     private TableColumn<HistoryData, String> DateColumn;
     
+    @FXML
+    private TableView<HistoryData> ReservationToday;
+    
+    @FXML
+    private TableColumn<HistoryData, String> TParkingSpaceColumn; 
+    
+    @FXML
+    private TableColumn<HistoryData, String> TDateColumn;
+    
  
 
     
@@ -62,17 +71,20 @@ public class History_Controller implements Initializable {
 		
 		ParkingSpaceColumn.setCellValueFactory(new PropertyValueFactory<HistoryData, String>("ParkingSpace"));
 		DateColumn.setCellValueFactory(new PropertyValueFactory<HistoryData, String>("Date"));
+		TParkingSpaceColumn.setCellValueFactory(new PropertyValueFactory<HistoryData, String>("ParkingSpace"));
+		TDateColumn.setCellValueFactory(new PropertyValueFactory<HistoryData, String>("Date"));
 	    load();
 	}
 	
 	private void load() {
 		ObservableList<HistoryData> DataList = FXCollections.observableArrayList();
+		ObservableList<HistoryData> TDataList = FXCollections.observableArrayList();
 		String space = "leer";
 	    String date = "leer";
-		//int ID = getUserId(LoginController.un);
+	    LocalDate ld = LocalDate.now();
+	    String localdate = ld.toString();
+	    System.out.println(localdate);
 		Connection con = DatabaseConnection.getConnection(); // Use your existing method to get a database connection
-		LocalDate currentDate = LocalDate.now();
-		System.out.println("CurrentDate:" +currentDate);
 		try(Statement stm = con.createStatement()) {
             String s = "SELECT * FROM reservation WHERE UserID = '" + getUserId(LoginController.un) + "'";
             ResultSet rs = stm.executeQuery(s);
@@ -81,6 +93,7 @@ public class History_Controller implements Initializable {
             	space = rs.getString("SpaceID");
             	HistoryData data = new HistoryData(space, date);
         		DataList.add(data);
+        		if(date.equals(localdate)) TDataList.add(data);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,8 +102,7 @@ public class History_Controller implements Initializable {
 		
 		
 		ReservationHistory.setItems(DataList);
-		System.out.println(DataList.get(0).getDate());
-		System.out.println(space);
+		ReservationToday.setItems(TDataList);
 		
 	}
 	
