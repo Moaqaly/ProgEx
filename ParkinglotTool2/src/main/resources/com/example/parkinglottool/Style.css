@@ -1,0 +1,61 @@
+
+
+#Logout_Button:hover {
+    -fx-background-color: #b91f1f;
+    -fx-transition: background-color 0.5s;
+    -fx-animation: pulse_anim 2s infinite;
+}
+#Book_now_Button {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+#Book_now_Button .button-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 80px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+#Book_now_Button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+#Book_now_Button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+#Book_now_Button:hover .button-circle {
+    width: 100%;
+    background: #b1dae7;
+}
+
+#Book_now_Button:hover svg {
+    transform: translateX(0);
+}
+
+
+
+
