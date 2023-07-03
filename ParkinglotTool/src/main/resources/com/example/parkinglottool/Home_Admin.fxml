@@ -148,22 +148,22 @@
                </graphic>
             </Button>
             <TableView fx:id="info_List" layoutX="472.0" layoutY="518.0" prefHeight="65.0" prefWidth="267.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="518.0">
-              <columns>
-                <TableColumn fx:id="Parkinglot_nummber" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Parking lot Number" />
-                <TableColumn fx:id="Parkinglot_Typ" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Typ" />
-              </columns>
+               <columns>
+                  <TableColumn fx:id="Parkinglot_nummber" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Parking lot Number" />
+                  <TableColumn fx:id="Parkinglot_Typ" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Typ" />
+               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
             <DatePicker fx:id="Date_Selecter" layoutX="14.0" layoutY="428.0" onAction="#Date_Selecter" prefHeight="53.0" prefWidth="269.0" promptText="Select Date" style="-fx-background-radius: 90;" />
             <TableView fx:id="User_selecter_list" layoutX="14.0" layoutY="492.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="272.0" style="-fx-background-radius: 20;" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="245.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="458.0" AnchorPane.topAnchor="492.0">
-              <columns>
-                <TableColumn fx:id="Column_User" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="User" />
+               <columns>
+                  <TableColumn fx:id="Column_User" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="User" />
                   <TableColumn fx:id="Column_Details" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Disability" />
                   <TableColumn fx:id="Column_Gender" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Gender" />
                   <TableColumn fx:id="Column_Typ" prefWidth="75.0" style="-fx-background-color: #c9d6ed;" text="Typ" />
-              </columns>
+               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>

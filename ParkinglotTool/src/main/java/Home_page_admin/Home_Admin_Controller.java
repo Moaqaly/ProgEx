@@ -20,6 +20,8 @@ import java.net.URL;
 import java.sql.*;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -89,6 +91,99 @@ public class Home_Admin_Controller implements Initializable  {
 ///////////////
 @FXML
 private Label User_lable;
+/////////////////
+@FXML
+void Date_Selecter(ActionEvent event) {
+    LocalDate selectedDate = Date_Selecter.getValue();
+
+    if (selectedDate != null) {
+        // Enable all buttons initially
+        Parking00.setDisable(false);
+        Parking01.setDisable(false);
+        Parking02.setDisable(false);
+        Parking10.setDisable(false);
+        Parking11.setDisable(false);
+        Parking12.setDisable(false);
+        Parking20.setDisable(false);
+        Parking21.setDisable(false);
+        Parking22.setDisable(false);
+        Parking30.setDisable(false);
+        Parking31.setDisable(false);
+        Parking32.setDisable(false);
+
+        try {
+            // Fetch the reserved parking lots for the selected date
+            List<Integer> reservedParkingLots = getReservedParkingLots(selectedDate);
+
+            // Disable the buttons for the reserved parking lots
+            for (Integer spaceID : reservedParkingLots) {
+                disableParkingButton(spaceID);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            showErrorAlert("Error", "Failed to fetch reservation data.");
+        }
+    }
+}
+
+    public List<Integer> getReservedParkingLots(LocalDate date) throws SQLException {
+        List<Integer> reservedParkingLots = new ArrayList<>();
+
+        Connection connection = DatabaseConnection.getConnection();
+        PreparedStatement statement = connection.prepareStatement("SELECT SpaceID FROM reservation WHERE ReservationDate = ?");
+        statement.setDate(1, java.sql.Date.valueOf(date));
+        ResultSet resultSet = statement.executeQuery();
+
+        while (resultSet.next()) {
+            int spaceID = resultSet.getInt("SpaceID");
+            reservedParkingLots.add(spaceID);
+        }
+
+        return reservedParkingLots;
+    }
+
+    public void disableParkingButton(int spaceID) {
+        switch (spaceID) {
+            case 1:
+                Parking00.setDisable(true);
+                break;
+            case 2:
+                Parking01.setDisable(true);
+                break;
+            case 3:
+                Parking02.setDisable(true);
+                break;
+            case 4:
+                Parking10.setDisable(true);
+                break;
+            case 5:
+                Parking11.setDisable(true);
+                break;
+            case 6:
+                Parking12.setDisable(true);
+                break;
+            case 7:
+                Parking20.setDisable(true);
+                break;
+            case 8:
+                Parking21.setDisable(true);
+                break;
+            case 9:
+                Parking22.setDisable(true);
+                break;
+            case 10:
+                Parking30.setDisable(true);
+                break;
+            case 11:
+                Parking31.setDisable(true);
+                break;
+            case 12:
+                Parking32.setDisable(true);
+                break;
+            default:
+                break;
+        }
+    }
     /////////////////////
     @FXML
     private void HandleHistory() throws IOException {
@@ -102,10 +197,7 @@ private Label User_lable;
         currentStage.setScene(scene);
         currentStage.show();
     }
-    @FXML
-    void Date_Selecter(ActionEvent event) {
 
-    }
 @FXML
 void Cancel_Booking(ActionEvent event) throws SQLException {
     User_selecter_list selectedUser = User_selecter_list.getSelectionModel().getSelectedItem();
