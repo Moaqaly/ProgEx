@@ -36,6 +36,7 @@
             <Button fx:id="Back_Button" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleBackButtonHistory" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Back" />
             <Button layoutX="10.0" layoutY="374.0" mnemonicParsing="false" onAction="#handletoday" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Only show reservations for today" />
             <Button layoutX="10.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleall" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Show all reservations" />
+            <Button layoutX="6.0" layoutY="92.0" mnemonicParsing="false" onAction="#handlefile" prefHeight="60.0" prefWidth="293.0" style="-fx-background-radius: 90;" text="Print todays reservation into txt file" />
          </children>
       </AnchorPane>
    </left>

@@ -1,6 +1,10 @@
 package HistoryAdmin;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -250,6 +254,30 @@ public class HistoryControllerAdmin implements Initializable {
         currentStage.setScene(scene);
         currentStage.show();
 	}
+	
+	@FXML
+	private void handlefile() {
+		try {
+			writeToTextFile("reservations.txt", TDataList);
+			
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	  private static void writeToTextFile(String filename, ObservableList<HistoryDataAdmin> students)
+	            throws IOException {
+		    LocalDate ld = LocalDate.now();
+		    String localdate = ld.toString();
+	        FileWriter writer = new FileWriter(filename);
+	        writer.write("Reservations for " + localdate + ":\n");
+	        for (HistoryDataAdmin data : students) {
+	            writer.write(data.getUsername() + ", " + data.getParkingSpace() + "\n");
+	        }
+	        writer.close();
+	    }
 	
 	
 	
