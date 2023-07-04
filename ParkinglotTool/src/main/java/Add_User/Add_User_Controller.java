@@ -170,7 +170,7 @@ private ObservableList<tableUser> originalUserList; // Declare a variable to sto
 
                     showInfoAlert( "Success", "User removed successfully.");
                 } else {
-                    showErrorAlert( "Error", "Failed to remove the user. It is not possible to delete a user with an active reservation!");
+                    showErrorAlert( "Error", "Failed to remove the user. It is not possible to delete a user with an reservation!");
                 }
             }
         } else {
